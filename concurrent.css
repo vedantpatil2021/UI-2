@@ -1,0 +1,593 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #f3d24f;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0px 3%;
+    background-color: #0051ffbe;
+}
+
+.logo {
+    margin-right: auto;
+    color: white;
+    font-size: 50px;
+}
+
+.nav__links {
+    list-style: none;
+    display: flex;
+}
+
+.nav__links a,
+.cta,
+.overlay__content a {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+.nav__links li {
+    padding: 0px 20px;
+}
+
+.nav__links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+    color: #0088a9;
+}
+
+.cta {
+    margin-left: 20px;
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.cta:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+}
+
+
+/* Mobile Nav */
+
+.menu {
+    display: none;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: #004a7c;
+    overflow-x: hidden;
+    transition: all 0.5s ease 0s;
+}
+
+.overlay--active {
+    width: 100%;
+}
+
+.overlay__content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay a {
+    padding: 15px;
+    font-size: 36px;
+    display: block;
+    transition: all 0.3s ease 0s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+    color: #0088a9;
+}
+
+.overlay .close {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color: #edf0f1;
+    cursor: pointer;
+}
+
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px;
+    }
+    .overlay .close {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .nav__links,
+    .cta {
+        display: none;
+    }
+    .menu {
+        display: initial;
+    }
+}
+
+
+/* Main */
+
+
+lottie-player{
+    display: none;
+}
+
+main {
+    margin: 3rem;
+}
+
+h1 {
+    font-size: 5vw;
+}
+
+h2 {
+    font-size: 4.5vw;
+}
+
+p {
+    font-size: 1.5vw;
+    margin-top: 1rem;
+}
+
+.instruction_image {
+    width: 50%;
+    height: auto;
+    background-blend-mode: darken;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3rem;
+}
+
+label {
+    font-size: 1.2vw;
+    text-align: left;
+}
+
+small {
+    font-size: 1.6vw;
+    line-height: 3vw;
+}
+
+input {
+    width: 20%;
+    height: auto;
+    border: 0px solid rgb(182, 182, 182);
+    border-radius: 2px;
+    box-shadow: 1px 2px 20px 1px;
+    /* margin-left: 37vw; */
+    outline-offset: 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+input:focus {
+    outline: none;
+}
+
+.f_and_a {
+    margin-top: 3vw;
+}
+
+.f_and_a input {
+    width: 80%;
+    border: none;
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+button {
+    margin: 1rem;
+    width: 150px;
+    height: auto;
+    border-radius: 9px;
+    border: 0px;
+    background-color: #0051ffbe;
+    color: white;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+
+.image_div {
+    display: flex;
+    justify-content: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.two {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Test */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #777777;
+}
+
+.container {
+  width: 980px;
+  margin: 0 auto;
+  max-width: 100%;
+  padding-right: 16px;
+  padding-left: 16px;
+}
+
+section {
+  background: #f3d24f;
+  padding: 100px 0;
+}
+
+.tab__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 24px;
+}
+
+.tab__item {
+  overflow: hidden;
+  cursor: pointer;
+  padding: 12px 8px;
+  margin-right: 24px;
+  text-shadow: 0 0 0.5px currentColor;
+  letter-spacing: 1px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  font-size: 18px;
+  position: relative;
+  color: #777777;
+}
+
+.tab__item:before {
+  content: "";
+  position: absolute;
+  top: 95%;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: black;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.tab__item.is--active {
+  color: #444;
+  position: relative;
+}
+
+.tab__item.is--active:before {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tab__content {
+  padding-top: 32px;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-bottom: 32px;
+  background:  black;
+  border-radius: 0 10px 10px;
+}
+
+.tab__content-item {
+  display: none;
+  background:  black;
+}
+
+.tab__content-item.is--active {
+  display: block;
+}
+
+.tab__content-title {
+  padding: 24px 24px 24px 0;
+}
+
+.tab .tab .tab__item {
+  font-size: 16px;
+}
+
+.tab .tab .tab__content {
+  padding: 0;
+}
+/*# sourceMappingURL=section.css.map */
+
+.first{
+  position: relative;
+  width: 500px;
+  height: 500px;
+  background-color: black;
+}
+
+.first img {
+  position: absolute;
+  top: 148;  
+  left: 254;
+}
+
+
+.first_button{
+    color: white;
+    background-color: rgb(49, 131, 255);
+    display: block;
+    position: relative;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.reset_button{
+    width: 148px;
+    color: white;
+    background-color:rgb(49, 131, 255);
+    display: block;
+    position: relative;
+    margin-bottom: 10px;
+    font-weight:700;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    box-shadow: 0px 0px 0px 0px;
+    border-radius: 8px;
+}
+
+input{
+  background-color: #f3d24f;
+}
+
+.Page_1{
+    display: none;
+    flex-direction: row;
+}
+
+.Page_2{
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.calculation{
+    margin-left: 5rem;
+}
+
+.output{
+    display: flex;
+    flex-direction: row;
+    margin: 2rem;
+}
+
+.output small{
+    font-size: 2vw;
+}
+
+.output input{
+    width: 30%;
+    height: 20%;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    background-color: black;
+    color: white;
+    box-shadow: 0px 0px 0px 0px;
+    border: 1px solid white;
+}
+
+.two_fsyatem{
+    width: 100%;
+}
+
+.pl-14{
+    font-size: 100px;
+}
+
+.first-button{
+    margin-top: 25rem;
+}
+
+.resultant{
+    font-size: 1.5rem;
+}
+
+.newton{
+    margin-left: 1rem;
+    margin-top: 0.4rem;
+    font-size: large;
+    color: white;
+}
+
+.equal{
+    margin-left: 1rem;
+    margin-top: 0.4rem;
+    font-size: large;
+}
+
+/* Inputs */
+
+.input_1{
+    position: absolute; top: 69px; left: 49px;width: 30px; height: 30px;background-color: #f3d24f;
+    border: 1px solid black;
+}
+
+.input_2{
+    position: absolute; top: 325px; left: 305px;width: 30px; height: 30px;background-color: #f3d24f;
+    border: 1px solid black;
+}
+.input_3{
+    position: absolute; top: 157px; left: 68px;width: 30px; height: 30px;background-color: #f3d24f;
+    border: 1px solid black;
+}
+.input_4{
+    position: absolute; top: 203px; left: 253px;width: 30px; height: 30px;background-color: #f3d24f;
+    border: 1px solid black;
+}
+
+
+
+
+
+.input_5{
+    position: absolute; top: 67px; left: 33px;width: 30px; height: 30px;background-color: #f3d24f;
+    border: 1px solid black;
+}
+.input_6{
+    position: absolute; top: 8px; left: 297px;width: 30px; height: 30px;background-color: #f3d24f;
+    border: 1px solid black;
+}
+.input_7{
+    position: absolute; top: 300px; left: 275px;width: 30px; height: 30px;background-color: #f3d24f;
+    border: 1px solid black;
+}
+.input_8{
+    position: absolute; top: 122px; left: 164px;width: 30px; height: 30px;background-color: #f3d24f;
+    border: 1px solid black;
+}
+.input_9{
+    position: absolute; top: 185px; left: 230px;width: 30px; height: 30px;background-color: #f3d24f;
+    border: 1px solid black;
+}
+.input_10{
+    position: absolute; top: 128px; left: 248px;width: 30px; height: 30px;background-color: #f3d24f;
+    border: 1px solid black;
+}
+
+.pl-20 {
+    padding-left: 0rem;
+    margin-left: 0rem;
+}
+
+
+
+@media only screen and (max-width:995px){
+    .Page_1{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .first{
+        height: 700px;
+    }
+
+    .Page_2{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .calculation{
+        margin-left: 0%;
+    }
+
+    .first_button{
+        width: auto;
+        display: block;
+        position: relative;
+    }
+
+    .two_fsyatem{
+        width: 500px;
+        height: auto;
+    }
+
+    .input_1{
+        position: absolute; top: 60px; left: 55px;width: 30px; height: 30px;background-color: #f3d24f;
+    }
+    
+    .input_2{
+        position: absolute; top: 176px; left: 210px;width: 30px; height: 30px;background-color: #f3d24f;
+    }
+    .input_3{
+        position: absolute; top: 70px; left: 200px;width: 30px; height: 30px;background-color: #f3d24f;
+    }
+    .input_4{
+        position: absolute; top: 90px; left: 200px;width: 30px; height: 30px;background-color: #f3d24f;
+    }
+    .input_5{
+        position: absolute; top: 98px; left: 59px;width: 30px; height: 30px;background-color: #f3d24f;
+    }
+    .input_6{
+        position: absolute; top: 18px; left: 425px;width: 30px; height: 30px;background-color: #f3d24f;
+    }
+    .input_7{
+        position: absolute; top: 428px; left: 393px;width: 30px; height: 30px;background-color: #f3d24f;
+    }
+    .input_8{
+        position: absolute; top: 186px; left: 223px;width: 30px; height: 30px;background-color: #f3d24f;
+    }
+    .input_9{
+        position: absolute; top: 268px; left: 330px;width: 30px; height: 30px;background-color: #f3d24f;
+    }
+    
+    .input_10{
+        position: absolute; top: 189px; left: 353px;width: 30px; height: 30px;background-color: #f3d24f;
+    }
+
+    .first-button{
+        margin-top: 33rem;
+    }
+
+    .reset_button{
+        width: 124px;
+    }
+}
+
+
+@media only screen and (max-width:600px){
+    .two_fsyatem{
+        width: auto;
+    }
+
+    .two_fsyatem{
+        width: auto;
+        height: auto;
+    }
+
+    small{
+        font-size: 4vw;
+    }
+}
