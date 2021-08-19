@@ -590,4 +590,8 @@ input{
     small{
         font-size: 4vw;
     }
+    
+    .Page_1{
+        display: none;
+    }
 }
